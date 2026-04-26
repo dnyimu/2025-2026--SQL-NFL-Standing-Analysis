@@ -10,6 +10,20 @@ Group By
 ORDER By
 	Wins desc;
 
+
+   -- Top  5  Least losses in AFC
+    SELECT
+	Team,
+    Losses,
+   DENSE_RANK() OVER( order by Losses asc)  AS LeastLossesRanking  
+From
+	afc_2025_2026_standings
+Group By
+	Team, losses
+ORDER By
+	Losses asc
+    limit 5;
+
 -- Most wins in AFC North Ranked
 SELECT
 	Team,
