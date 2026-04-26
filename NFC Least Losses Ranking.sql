@@ -10,6 +10,20 @@ Group By
 ORDER By
 	Losses asc;
 
+-- Top 5 least losses in NFC
+    
+    SELECT
+	Team,
+    Losses,
+   DENSE_RANK() OVER( order by Losses asc)  AS LeastLossesRanking  
+From
+	nfc_2025_2026_standings
+Group By
+	Team, losses
+ORDER By
+	Losses asc
+    limit 5;
+
 --  Least losses in NFC North Ranked
 SELECT
 	Team,
