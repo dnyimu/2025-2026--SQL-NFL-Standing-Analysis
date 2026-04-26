@@ -10,6 +10,19 @@ Group By
 ORDER By
 	Wins desc;
 
+-- Top 5 most wins in NFC
+    SELECT
+	Team,
+    Wins,
+  DENSE_RANK() OVER( order by Wins desc)  AS WinsRanking  
+From
+	nfc_2025_2026_standings
+Group By
+	Team, Wins
+ORDER By
+	Wins desc
+    limit 5
+
 -- Most wins in NFC North Ranked
 SELECT
 	Team,
