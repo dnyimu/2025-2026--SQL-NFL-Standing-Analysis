@@ -52,7 +52,7 @@ ORDER BY
 SELECT
     Team,
     Losses,
-    DENSE_RANK() OVER( order by Losses desc )  AS LeastLossesRanking, 
+    DENSE_RANK() OVER( order by Losses asc )  AS LeastLossesRanking, 
     Strength_Of_Schedule,
     DENSE_RANK() OVER( order by Strength_Of_Schedule desc)  AS StrengthOfScheduleRank
 FROM
