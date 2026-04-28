@@ -1,0 +1,9 @@
+SELECT
+	*
+FROM
+	afc_2025_2026_standings AS AFC
+ INNER JOIN
+	nfc_2025_2026_standings AS NFC
+ON
+	AFC.WINS = NFC.WINS;
+
