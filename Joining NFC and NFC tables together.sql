@@ -7,3 +7,13 @@ FROM
 ON
 	AFC.WINS = NFC.WINS;
 
+-- FULL JOIN WORK AROUND
+SELECT
+	*
+FROM
+	afc_2025_2026_standings 
+UNION ALL
+SELECT
+	*
+FROM
+	nfc_2025_2026_standings
