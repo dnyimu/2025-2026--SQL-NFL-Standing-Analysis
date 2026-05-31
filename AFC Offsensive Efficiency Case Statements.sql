@@ -14,7 +14,7 @@ WHEN
 ELSE 
 	"Efficient Offense"
 END AS 
-	"Team Rating"
+	Offensive Efficiency Rating
 FROM
 	afc_2025_2026_standings
 GROUP BY
