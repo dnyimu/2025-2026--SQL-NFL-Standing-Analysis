@@ -13,7 +13,7 @@ WHEN
 ELSE 
 	"Efficient Defense"
 END AS 
-	"Defensive Team Rating"
+	"Defensive Efficiency Rating"
 FROM
 	afc_2025_2026_standings
 GROUP BY
