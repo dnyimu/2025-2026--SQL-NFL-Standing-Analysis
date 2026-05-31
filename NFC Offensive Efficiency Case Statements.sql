@@ -14,7 +14,7 @@ WHEN
 ELSE 
 	"Efficient Offense"
 END AS 
-	"Team  Offensive Rating"
+	"Offensive Efficiency Rating"
 FROM
 	nfc_2025_2026_standings
 GROUP BY
